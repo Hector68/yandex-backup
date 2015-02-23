@@ -1,0 +1,8 @@
+#список файлов и папок, которые будут исключены из архива
+_backup
+
+#BITRIX
+bitrix/tmp/*
+bitrix/updates/*
+bitrix/backup/*
+bitrix/*cache/*

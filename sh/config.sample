@@ -1,0 +1,35 @@
+#!/bin/bash
+
+PROJ_NAME="" #Имя проекта
+MAIL="" #Почта для оповещения о бекапе
+
+
+########
+#MYSQL
+USER="" #Имя пользователя базы данных
+PASSWD="" #Пароль от базы данных
+HOST="localhost" #Хост MySQL
+DB_NAME="" #Имя базы данных для резервного копирования
+
+CHARSET="utf8" #Кодировка базы данных (utf8)
+DB_FILE_NAME=$DB_NAME #Имя дампа базы данных
+AR_FILE_NAME=$PROJ_NAME #Имя архива с файлами
+
+
+######
+#FILES
+PROJDIR="/var/www/html" # Путь к каталогу с проектом
+DATADIR="$PROJDIR/_backup/file" #Путь к каталогу где будут храниться резервные копии
+SRCFILES="$PROJDIR/" #Путь к каталогу файлов для архивирования
+PREFIX=`date +%F` #Префикс по дате для структурирования резервных копий
+DATE=$(date +%F--%H-%M) #Дата для папки с локальным бекапом
+
+
+########
+#YANDEX
+YA_USER=""
+YA_PASSWD=""
+OAUTH=""
+SHORTLINK=""
+
+# https://oauth.yandex.ru/authorize?response_type=token&client_id=<client_id>
